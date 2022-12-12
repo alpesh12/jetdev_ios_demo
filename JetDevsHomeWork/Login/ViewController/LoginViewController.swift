@@ -12,7 +12,6 @@ import RxCocoa
 class LoginViewController: UIViewController {
     
     // MARK: - Outlet
-    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -65,13 +64,16 @@ class LoginViewController: UIViewController {
         passwordTextField.rx.text.bind(to: viewModel.passwordSubject).disposed(by: disposeBag)
         
         viewModel.isValidForm.bind(to: loginButton.rx.isEnabled).disposed(by: disposeBag)
-        viewModel.isValidForm.subscribe(onNext: { isValid in
+        viewModel.isValidForm
+            .subscribe(onNext: { isValid in
                         if(isValid) {
                             self.loginButton.backgroundColor = UIColor(rgb: 0x28518D)
                         } else {
                             self.loginButton.backgroundColor = UIColor(rgb: 0xBDBDBD)
                         }
           })
+            .disposed(by: disposeBag)
+        
         loginButton.rx.tap
                    .subscribe(onNext: { [weak self] _ in self?.loginApiCall() })
                    .disposed(by: disposeBag)
@@ -80,7 +82,11 @@ class LoginViewController: UIViewController {
     // MARK: - Submit Clicked
     
     func loginApiCall() {
-        viewModel.requestLogin(withEmail: emailTextField.text!, withPassword: passwordTextField.text!)
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            self.showAlert(message: "Email and Password can't be empty")
+            return
+        }
+        viewModel.requestLogin(withEmail: email, withPassword: password)
     }
     
     func showAlert(message: String) {

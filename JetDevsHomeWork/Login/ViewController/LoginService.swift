@@ -20,10 +20,12 @@ struct LoginAPIService {
     
     // MARK: - Services
     func requestLogin(withEmail email: String, withPassword password: String, completion: @escaping (User?, String?) -> Void) {
+        
         let params: [String: Any] = [
             "email": email,
             "password": password
         ]
+        
         AF.request(loginUrl, method: .post, parameters: params, encoding: JSONEncoding.default).responseData { response in
             switch response.result {
             case .success(let data):

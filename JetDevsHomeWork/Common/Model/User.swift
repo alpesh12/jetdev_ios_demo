@@ -24,6 +24,7 @@ struct DataResult: Codable {
 
 // MARK: - DataClass
 struct DataClass: Codable {
+    
     let user: User?
 }
 

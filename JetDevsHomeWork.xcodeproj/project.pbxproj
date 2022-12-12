@@ -49,7 +49,6 @@
 		CD969DC829432E7000B2786E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD969DC729432E6F00B2786E /* LoginViewModel.swift */; };
 		CD969DCB294340C100B2786E /* UIViewController+JetDevs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD969DCA294340C100B2786E /* UIViewController+JetDevs.swift */; };
 		CD969DCF2943512800B2786E /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD969DCE2943512800B2786E /* LoginService.swift */; };
-		CD969DD1294351C700B2786E /* LoginDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD969DD0294351C700B2786E /* LoginDetails.swift */; };
 		CD969DD529436E8800B2786E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD969DD429436E8800B2786E /* User.swift */; };
 		DD9CD5C395D5FAE03F59B68E /* Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FFF8B3EB514C818C31135B /* Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -124,7 +123,6 @@
 		CD969DC729432E6F00B2786E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CD969DCA294340C100B2786E /* UIViewController+JetDevs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+JetDevs.swift"; sourceTree = "<group>"; };
 		CD969DCE2943512800B2786E /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		CD969DD0294351C700B2786E /* LoginDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetails.swift; sourceTree = "<group>"; };
 		CD969DD429436E8800B2786E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E168756431AD9B671DACC28B /* Pods_JetDevsHomeWorkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetDevsHomeWorkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00AF71BC0DB1CFCDB921924 /* Pods_JetDevsHomeWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetDevsHomeWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,8 +237,6 @@
 		4E677C01272B8367006E325E /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				4E677C07272B83DD006E325E /* Views */,
-				4E677C06272B83D5006E325E /* ViewModel */,
 				4E677C05272B83CA006E325E /* ViewController */,
 			);
 			path = Account;
@@ -276,20 +272,6 @@
 				4E677C0F272B8455006E325E /* AccountViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C06272B83D5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C07272B83DD006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4E677C08272B83E4006E325E /* Login */ = {
@@ -380,10 +362,8 @@
 			children = (
 				CD969DCE2943512800B2786E /* LoginService.swift */,
 				CD969DC629432A4D00B2786E /* ViewModel */,
-				CD969DC529432A4600B2786E /* Views */,
 				CD7F647C2941FBAE00D99CD6 /* LoginViewController.xib */,
 				CD7F647D2941FBAE00D99CD6 /* LoginViewController.swift */,
-				CD969DD0294351C700B2786E /* LoginDetails.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -403,13 +383,6 @@
 				CD969DC02942FC8400B2786E /* PasswordValidator.swift */,
 			);
 			path = Validator;
-			sourceTree = "<group>";
-		};
-		CD969DC529432A4600B2786E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CD969DC629432A4D00B2786E /* ViewModel */ = {
@@ -730,7 +703,6 @@
 				CD969DD529436E8800B2786E /* User.swift in Sources */,
 				4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */,
 				CD7F647F2941FBAF00D99CD6 /* LoginViewController.swift in Sources */,
-				CD969DD1294351C700B2786E /* LoginDetails.swift in Sources */,
 				CD969DCF2943512800B2786E /* LoginService.swift in Sources */,
 				CD969DC12942FC8400B2786E /* PasswordValidator.swift in Sources */,
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
